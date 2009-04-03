@@ -4,7 +4,9 @@
   (section
     (title "Overview")
 
-    (para "This package provides a collection of Ada packages to ease
-      working with C strings."))
+    (para "The " (item package "Getopt") " package provides command line option
+      processing. It is analgous to the standard POSIX "
+      (link-ext "http://www.opengroup.org/onlinepubs/000095399/functions/getopt.html" "getopt")
+      " function."))
 
 ) ; end of section

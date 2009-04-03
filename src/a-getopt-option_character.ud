@@ -1,0 +1,16 @@
+(section
+  (ref "getopt_option_character")
+  (title "Getopt.Option_Character")
+  (para function_desc "Return character associated with option.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with Getopt;
+
+function Option_Character return Character;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Option_Character") " function returns the
+      character associated with the current command line option.")))

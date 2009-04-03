@@ -1,0 +1,16 @@
+(section
+  (ref "getopt_option_index")
+  (title "Getopt.Option_Index")
+  (para function_desc "Return index of current option.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with Getopt;
+
+function Option_Index return Positive;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Option_Index") " function returns the
+      index of the current command line option.")))

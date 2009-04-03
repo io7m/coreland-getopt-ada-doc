@@ -1,0 +1,17 @@
+(section
+  (ref "getopt_reset")
+  (title "Getopt.Reset")
+  (para function_desc "Reset command line argument processing.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with Getopt;
+
+procedure Reset;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Reset") " procedure resets command line
+      processing. This procedure is called implicitly at elaboration time
+      by the " (item ada_package "Getopt") " package.")))

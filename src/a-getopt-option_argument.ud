@@ -1,0 +1,16 @@
+(section
+  (ref "getopt_option_argument")
+  (title "Getopt.Option_Argument")
+  (para function_desc "Return argument associated with option.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with Getopt;
+
+function Option_Argument return String;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Option_Argument") " function returns the
+      argument associated with the current command line option.")))

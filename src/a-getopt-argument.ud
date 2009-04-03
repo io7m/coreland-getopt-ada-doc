@@ -1,0 +1,16 @@
+(section
+  (ref "getopt_argument")
+  (title "Getopt.Argument")
+  (para function_desc "Return number of remaining arguments.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with Getopt;
+
+function Argument (index : Positive) return String;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Argument") " function returns the
+      current command line argument.")))

@@ -12,14 +12,15 @@ function Process (Options : String) return Integer;
 Argument_Required : exception;
 Argument_Illegal  : exception;
 "))
+
   (subsection
     (title "Description")
     (para
       "The " (item ada_function "Process") " function consumes one command line
-      argument and returns the character associated with the argument, or "
+      option and returns the character associated with the argument, or "
       (item constant "Option_EOF") " if there are no arguments left to process.")
     (para
-      "The function should be called repeatedly until all " (item constant "Option_EOF")
+      "The function should be called repeatedly until " (item constant "Option_EOF")
       " is returned.")
     (para
       "The function is passed a string specifying options and whether or not
@@ -28,13 +29,35 @@ Argument_Illegal  : exception;
 "Process (\"abBc:\");")
     (para
       "The above string specifies that the program takes an "
-      (item parameter "-a") " argument, a " (item parameter "-b") " argument, a "
-      (item parameter "-B") " argument and a " (item parameter "-c") " argument
+      (item option "-a") " option, a " (item option "-b") " option, a "
+      (item option "-B") " option and a " (item option "-c") " option
       that takes an extra argument. An example of calling the program with these
-      arguments would be:")
+      options would be:")
     (para-verbatim example
 "$ ./prog -a -b -B -c arg")
     (para
       "Options may be grouped:")
     (para-verbatim example
-"$ ./prog -abBc arg")))
+"$ ./prog -abBc arg")
+    (para
+      "Option processing can be terminated by passing " (item option "--") " as
+      an option:")
+    (para-verbatim example
+"$ ./prog -a -b -- -c -d")
+    (para
+      "In the above example, the program only receives " (item option "-a")
+      " and " (item option "-b") "."))
+
+  (subsection
+    (title "Exceptions")
+    (para
+      "If an option is passed to the program that is not present in the 
+      given " (item parameter "Options") " string, the function raises "
+      (item ada_exception "Argument_Illegal") ".")
+    (para
+      "If an option is specified as requiring an argument in the given "
+      (item parameter "Options") " string and an argument isn't given on the
+       command line, " (item ada_exception "Argument_Required") " is raised."))
+  (subsection
+    (title "Example")
+    (para-verbatim example (render "example.adb"))))

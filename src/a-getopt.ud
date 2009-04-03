@@ -4,4 +4,10 @@
   (contents)
 
   (include "a-getopt-process.ud")
+  (include "a-getopt-reset.ud")
+  (include "a-getopt-argument_count.ud")
+  (include "a-getopt-argument.ud")
+  (include "a-getopt-option_argument.ud")
+  (include "a-getopt-option_character.ud")
+  (include "a-getopt-option_index.ud")
 )
