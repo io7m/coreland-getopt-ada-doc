@@ -1,0 +1,7 @@
+(section
+  (ref "getopt")
+  (title "Getopt API Reference")
+  (contents)
+
+  (include "a-getopt-process.ud")
+)

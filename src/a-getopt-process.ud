@@ -1,0 +1,40 @@
+(section
+  (ref "getopt_process")
+  (title "Getopt.Process")
+  (para function_desc "Process command line argument.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"with Getopt;
+
+function Process (Options : String) return Integer;
+
+Argument_Required : exception;
+Argument_Illegal  : exception;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Process") " function consumes one command line
+      argument and returns the character associated with the argument, or "
+      (item constant "Option_EOF") " if there are no arguments left to process.")
+    (para
+      "The function should be called repeatedly until all " (item constant "Option_EOF")
+      " is returned.")
+    (para
+      "The function is passed a string specifying options and whether or not
+       they should take arguments:")
+    (para-verbatim example
+"Process (\"abBc:\");")
+    (para
+      "The above string specifies that the program takes an "
+      (item parameter "-a") " argument, a " (item parameter "-b") " argument, a "
+      (item parameter "-B") " argument and a " (item parameter "-c") " argument
+      that takes an extra argument. An example of calling the program with these
+      arguments would be:")
+    (para-verbatim example
+"$ ./prog -a -b -B -c arg")
+    (para
+      "Options may be grouped:")
+    (para-verbatim example
+"$ ./prog -abBc arg")))

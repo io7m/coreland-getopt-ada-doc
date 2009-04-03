@@ -1,0 +1,10 @@
+(section
+  (title "Orientation")
+
+  (section
+    (title "Overview")
+
+    (para "This package provides a collection of Ada packages to ease
+      working with C strings."))
+
+) ; end of section
